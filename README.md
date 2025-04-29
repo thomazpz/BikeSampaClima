@@ -107,7 +107,7 @@ Execução dos Jobs
 Cada job é responsável por uma etapa específica do processamento de dados. Os jobs são executados de forma sequencial, para garantir que o processamento seja realizado corretamente, com os dados sendo transferidos entre as camadas de forma organizada.
 
 Jobs
-Job - Bike - Camada Bronze:
+Bike - Camada Bronze:
 
 Requisita dados da API BikeSampa, valida e processa as informações das estações de bicicletas.
 
@@ -115,7 +115,7 @@ Salva os dados brutos em formato Parquet na camada bronze.
 
 Em caso de erro, os dados de erro são registrados na camada erros.
 
-Job - Clima - Camada Bronze:
+Clima - Camada Bronze:
 
 Requisita dados da API OpenWeatherMap para a cidade de São Paulo.
 
@@ -125,7 +125,7 @@ Salva os dados em formato Parquet na camada bronze.
 
 Em caso de erro, os dados de erro são registrados na camada erros.
 
-Job - Clima - Camada Prata:
+Clima - Camada Prata:
 
 Lê os dados climáticos mais recentes da camada bronze.
 
@@ -133,7 +133,7 @@ Realiza transformações nos dados (e.g., formatação da data, cálculo de temp
 
 Salva os dados transformados na camada prata.
 
-Job - BikeClima - Camada Ouro:
+BikeClima - Camada Ouro:
 
 Integra os dados de bicicletas (da camada bronze) com os dados climáticos (da camada prata).
 
